@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150815150334) do
+ActiveRecord::Schema.define(version: 20150815151034) do
 
   create_table "posts", force: true do |t|
-    t.string "url"
-    t.string "title"
-    t.text   "description"
+    t.string  "url"
+    t.string  "title"
+    t.text    "description"
+    t.integer "foreign_key"
   end
 
   create_table "users", force: true do |t|
