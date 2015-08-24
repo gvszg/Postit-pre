@@ -1,4 +1,8 @@
 PostitTemplate::Application.routes.draw do
+  get '/register', to: 'users#new'
+  
+  resources :users, only: [:create, :update, :edit]
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
